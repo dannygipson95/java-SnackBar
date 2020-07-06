@@ -66,8 +66,8 @@ public class Snack {
     }
 
     public String returnSnack(){
-        return "Snack: " + this.name + "\nVending Machine: " + vendingMachineId +
-                "\nQuantity: " + this.quantity + "\nTotal Cost: $" + quantity*cost + "\n";
+        return "\nSnack: " + this.name + "\nVending Machine: " + vendingMachineId +
+                "\nQuantity: " + this.quantity + "\nTotal Cost: $" + quantity*cost;
     }
 
 }
