@@ -8,10 +8,10 @@ public class Snack {
     private String name;
     private int quantity;
     private double cost;
-    private int vendingMachineId;
+    private String vendingMachineId;
 
     // constructor
-    public Snack(String name, int quantity, double cost, int vendingMachineId){
+    public Snack(String name, int quantity, double cost, String vendingMachineId){
         maxId++;
         this.id = maxId;
         this.name = name;
@@ -41,11 +41,11 @@ public class Snack {
         this.cost = cost;
     }
 
-    public int getVendingMachineId(){
+    public String getVendingMachineId(){
         return vendingMachineId;
     }
 
-    public void setVendingMachineId(int vendingMachineId){
+    public void setVendingMachineId(String vendingMachineId){
         this.vendingMachineId = vendingMachineId;
     }
 
@@ -63,6 +63,11 @@ public class Snack {
 
     public double totalCost(int quantity){
         return cost*quantity;
+    }
+
+    public String returnSnack(){
+        return "Snack: " + this.name + "\nVending Machine: " + vendingMachineId +
+                "\nQuantity: " + this.quantity + "\nTotal Cost: $" + quantity*cost + "\n";
     }
 
 }
