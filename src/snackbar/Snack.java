@@ -1,17 +1,21 @@
 package snackbar;
 
+import java.text.DecimalFormat;
+
 public class Snack {
     // fields
     public static int maxId = 0;
+
+    private static DecimalFormat hund = new DecimalFormat("#.00");
 
     private int id;
     private String name;
     private int quantity;
     private double cost;
     private String vendingMachineId;
-
+    
     // constructor
-    public Snack(String name, int quantity, double cost, String vendingMachineId){
+    public Snack(String name, int quantity, double cost, String vendingMachineId) {
         maxId++;
         this.id = maxId;
         this.name = name;
@@ -21,53 +25,53 @@ public class Snack {
     }
 
     //methods
-    public int getId(){
+    public int getId() {
         return id;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 
-    public double getCost(){
+    public double getCost() {
         return cost;
     }
 
-    public void setCost(double cost){
+    public void setCost(double cost) {
         this.cost = cost;
     }
 
-    public String getVendingMachineId(){
+    public String getVendingMachineId() {
         return vendingMachineId;
     }
 
-    public void setVendingMachineId(String vendingMachineId){
+    public void setVendingMachineId(String vendingMachineId) {
         this.vendingMachineId = vendingMachineId;
     }
 
-    public int getQuantity(){
+    public int getQuantity() {
         return quantity;
     }
 
-    public void addQuantity(int newQuantity){
+    public void addQuantity(int newQuantity) {
         quantity = newQuantity + quantity;
     }
 
-    public void buySnacks(int buyQuantity){
+    public void buySnacks(int buyQuantity) {
         quantity = quantity - buyQuantity;
     }
 
-    public double totalCost(int quantity){
-        return cost*quantity;
+    public double totalCost(int quantity) {
+        return cost * quantity;
     }
 
-    public String returnSnack(){
+    public String returnSnack() {
         return "\nSnack: " + this.name + "\nVending Machine: " + vendingMachineId +
-                "\nQuantity: " + this.quantity + "\nTotal Cost: $" + quantity*cost;
+                "\nQuantity: " + this.quantity + "\nTotal Cost: $" + hund.format(quantity * cost);
     }
 
 }

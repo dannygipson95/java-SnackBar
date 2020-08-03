@@ -8,22 +8,22 @@ public class VendingMachine {
     private String name;
 
     // constructor
-    public VendingMachine(String name){
+    public VendingMachine(String name) {
         maxId++;
         this.id = maxId;
         this.name = name;
     }
 
     // methods
-    public int getId(){
+    public int getId() {
         return id;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 

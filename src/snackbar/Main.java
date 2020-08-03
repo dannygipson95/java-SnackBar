@@ -1,7 +1,7 @@
 package snackbar;
 
-public class Main{
-    private static void workVending(){
+public class Main {
+    private static void workVending() {
         // public Customer(String name, double cash)
         Customer customer1 = new Customer("Jane", 45.25);
         Customer customer2 = new Customer("Bob", 33.14);
@@ -18,29 +18,29 @@ public class Main{
         Snack snack5 = new Snack("Water", 20, 2.75, drink.getName());
 
         customer1.buySnack(3, snack4);
-        System.out.println(customer1.getName() + " cash on hand: $" + customer1.getCash());
+        System.out.println("\n" + customer1.getName() + " cash on hand: $" + customer1.getCash());
         System.out.println("Quantity of " + snack4.getName() + " " + snack4.getQuantity());
 
         customer1.buySnack(1, snack3);
-        System.out.println(customer1.getName() + " cash on hand: $" + customer1.getCash());
+        System.out.println("\n" + customer1.getName() + " cash on hand: $" + customer1.getCash());
         System.out.println("Quantity of " + snack3.getName() + " " + snack3.getQuantity());
 
         customer2.buySnack(2, snack4);
-        System.out.println(customer2.getName() + " cash on hand: $" + customer2.getCash());
+        System.out.println("\n" + customer2.getName() + " cash on hand: $" + customer2.getCash());
         System.out.println("Quantity of " + snack4.getName() + " " + snack4.getQuantity());
 
         customer1.addCash(10);
-        System.out.println(customer1.getName() + " cash on hand: $" + customer1.getCash());
+        System.out.println("\n" + customer1.getName() + " cash on hand: $" + customer1.getCash());
 
         customer1.buySnack(1, snack2);
-        System.out.println(customer1.getName() + " cash on hand: $" + customer1.getCash());
+        System.out.println("\n" + customer1.getName() + " cash on hand: $" + customer1.getCash());
         System.out.println("Quantity of " + snack2.getName() + " " + snack2.getQuantity());
 
         snack3.addQuantity(12);
-        System.out.println("Quantity of " + snack3.getName() + " " + snack3.getQuantity());
+        System.out.println("\n" + "Quantity of " + snack3.getName() + " " + snack3.getQuantity());
 
         customer2.buySnack(3, snack3);
-        System.out.println(customer2.getName() + " cash on hand: $" + customer2.getCash());
+        System.out.println("\n" + customer2.getName() + " cash on hand: $" + customer2.getCash());
         System.out.println("Quantity of " + snack3.getName() + " " + snack3.getQuantity());
 
         System.out.println(snack1.returnSnack());
@@ -50,7 +50,7 @@ public class Main{
         System.out.println(snack5.returnSnack());
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         workVending();
     }
 }
